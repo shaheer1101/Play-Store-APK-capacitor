@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.aneelasmakeover.app",
+    "sha256_cert_fingerprints": ["C1:4E:2B:BC:DF:46:80:A6:52:DB:66:3F:D5:2F:DF:D1:A9:04:65:32:42:2D:B3:53:49:D3:60:8A:98:7B:D5:35"]
+  }
+}]
