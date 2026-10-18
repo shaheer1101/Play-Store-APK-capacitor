@@ -1,0 +1,22 @@
+{
+  "name": "Aneela's MakeOver",
+  "short_name": "Aneela's",
+  "description": "Luxury Salon Mobile Experience & Academy",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A2419",
+  "theme_color": "#0A2419",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=192&h=192&auto=format&fit=crop",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=512&h=512&auto=format&fit=crop",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

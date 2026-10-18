@@ -1,0 +1,8 @@
+{
+  "name": "Aneelas MakeOver final",
+  "description": "A luxury salon mobile experience featuring premium makeup services, a beauty academy, and AI-powered beauty consultations. Perfection in Every Stroke.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
