@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Bell, ShoppingBag, Menu as MenuIcon } from 'lucide-react';
 import Logo from './Logo';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface HeaderProps {
   onAdminTrigger?: () => void;
@@ -32,10 +33,13 @@ const Header: React.FC<HeaderProps> = ({ onAdminTrigger, cartCount, onCartClick,
         </div>
       </div>
       
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3">
+        <PWAInstallButton />
+
         <button 
           onClick={onCartClick}
           className="text-[#F3F3F3] hover:text-[#F7E7CE] transition-all active:scale-90 relative p-2"
+          aria-label="Cart"
         >
           <ShoppingBag size={22} strokeWidth={1.5} />
           {cartCount > 0 && (
@@ -48,6 +52,7 @@ const Header: React.FC<HeaderProps> = ({ onAdminTrigger, cartCount, onCartClick,
         <button 
           onClick={onMenuOpen}
           className="w-10 h-10 rounded-full gold-gradient text-[#0A2419] flex items-center justify-center shadow-lg active:scale-90 transition-transform"
+          aria-label="Menu"
         >
           <MenuIcon size={20} strokeWidth={2.5} />
         </button>

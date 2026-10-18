@@ -1,0 +1,32 @@
+{
+  "id": "/",
+  "name": "Aneela's MakeOver",
+  "short_name": "Aneela's",
+  "description": "Luxury Salon Mobile Experience & Academy. Perfection in Every Stroke.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A2419",
+  "theme_color": "#0A2419",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
