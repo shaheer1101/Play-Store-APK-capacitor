@@ -18,7 +18,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    // Permanently suppress Netlify HUD and badge widget
+    try {
+      localStorage.setItem("nl-hud:public:v1", "hidden");
+      localStorage.setItem("nl-hud:owner-private:v1", "hidden");
+    } catch (e) {}
+
+    const removeNetlifyHUD = () => {
+      document.querySelectorAll('#nl-badge-frame, #nl-hud-frame, iframe[id^="nl-"]').forEach(f => f.remove());
+    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener('DOMContentLoaded', removeNetlifyHUD);
+      const observer = new MutationObserver(() => removeNetlifyHUD());
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+    }
+  </script>
   <style>
+    /* Complete suppression of Netlify HUD / badge elements */
+    #nl-badge-frame,
+    #nl-hud-frame,
+    iframe[id^="nl-"],
+    iframe[src*="netlify"],
+    [data-netlify-site-id] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      position: absolute !important;
+      top: -9999px !important;
+      left: -9999px !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #0A2419;
